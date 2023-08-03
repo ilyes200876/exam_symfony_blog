@@ -1,0 +1,5 @@
+App\Entity\Post:
+  post{0..100}:  
+    title: "<word()>"
+    content: "<sentence(25)>"
+    createdAt: '<dateTimeBetween("-2 years", "now")>'

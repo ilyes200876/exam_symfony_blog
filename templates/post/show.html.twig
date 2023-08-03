@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminController!{% endblock %}
+
+{% block body %}
+  <h1>{{ post.title }}</h1>
+  <h3>Le contenu de la publication</h3>
+  <p>{{ post.content }}</p>
+
+  <h2>Ajouter un commentaire via ce formulaire</h2>
+
+  {{ form_start(form) }}
+        {{ form_row(form.content) }}
+        <button type="submit">Envoyer</button>
+    {{ form_end(form) }}
+
+
+  <h3>Cette publication a {{ post.comments.count }} commentaire</h3>
+
+
+
+  <h3>Les commentaires de cette publication</h3>
+    <ul>
+      {% for comment in post.comments %}
+        <li><p> créer le {{ post.createdAt|date('d/m/Y H:i:s') }}</p>
+        <p>{{ comment.content }}</p><br></li>
+      {% endfor %}
+    </ul>
+
+{% endblock %}
