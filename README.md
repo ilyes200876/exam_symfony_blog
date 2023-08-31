@@ -1,5 +1,5 @@
-#Symfony examen 
-##Contexte de l’examen :
+# Symfony examen
+## Contexte de l’examen :
 Vous allez avoir des publications, juste un titre et du contenu.
 Le principe est de pouvoir créer des commentaires sur les publications. Les commentaires vont être anonyme.
 Modalité de l’examen :
